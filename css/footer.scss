@@ -42,7 +42,7 @@ footer.main-footer {
     }
   }
   .image-layer {
-    background-image: url('http://old4.commonsupport.com/appway/wp-content/uploads/2020/03/footer-bg-6.png');
+    background-image: url('../images/bg_footer.png');
     position: absolute;
     left: 0px;
     top: 0px;
@@ -77,6 +77,7 @@ footer.main-footer {
         margin-bottom: 32px !important;
         img {
           height: auto;
+          max-height: 60px;
           max-width: 100%;
           border: none;
           -webkit-border-radius: 0;

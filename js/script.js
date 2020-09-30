@@ -1,9 +1,3 @@
-$(document).ready(function () {
-  $('.owl-carousel').owlCarousel()
-})
-$(window).on('scroll', function () {
-  headerStyle()
-})
 if ($('.case-studies-carousel').length) {
   $('.case-studies-carousel').owlCarousel({
     loop: true,
@@ -84,42 +78,42 @@ if ($('.clients-carousel').length) {
         items: 4,
       },
       1200: {
-        items: 4,
+        items: 5,
       },
     },
   })
 }
 
 //Submenu Dropdown Toggle
-// if ($('.main-header li.dropdown ul').length) {
-//   $('.main-header .navigation li.dropdown').append(
-//     '<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>'
-//   )
-// }
+if ($('.main-header li.dropdown ul').length) {
+  $('.main-header .navigation li.dropdown').append(
+    '<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>'
+  )
+}
 
-//Mobile Nav Hide Show
-// if ($('.mobile-menu').length) {
-//   $('.mobile-menu .menu-box').mCustomScrollbar()
+// //Mobile Nav Hide Show
+if ($('.mobile-menu').length) {
+  // $('.mobile-menu .menu-box').mCustomScrollbar()
 
-//   var mobileMenuContent = $('.main-header .menu-area .main-menu').html()
-//   $('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent)
-//   $('.sticky-header .main-menu').append(mobileMenuContent)
+  // var mobileMenuContent = $('.main-header .menu-area .main-menu').html()
+  // $('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent)
+  // $('.sticky-header .main-menu').append(mobileMenuContent)
 
-//   //Dropdown Button
-//   $('.mobile-menu li.dropdown .dropdown-btn').on('click', function () {
-//     $(this).toggleClass('open')
-//     $(this).prev('ul').slideToggle(500)
-//   })
-//   //Menu Toggle Btn
-//   $('.mobile-nav-toggler').on('click', function () {
-//     $('body').addClass('mobile-menu-visible')
-//   })
+  //Dropdown Button
+  $('.mobile-menu li.dropdown .dropdown-btn').on('click', function () {
+    $(this).toggleClass('open')
+    $(this).prev('ul').slideToggle(500)
+  })
+  //Menu Toggle Btn
+  $('.mobile-nav-toggler').on('click', function () {
+    $('body').addClass('mobile-menu-visible')
+  })
 
-//   //Menu Toggle Btn
-//   $('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function () {
-//     $('body').removeClass('mobile-menu-visible')
-//   })
-// }
+  //Menu Toggle Btn
+  $('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function () {
+    $('body').removeClass('mobile-menu-visible')
+  })
+}
 
 // Scroll to a Specific Div
 if ($('.scroll-to-target').length) {
@@ -144,6 +138,7 @@ if ($('.wow').length) {
 }
 
 //Update Header Style and Scroll to Top
+
 function headerStyle() {
   if ($('.main-header').length) {
     var windowpos = $(window).scrollTop()
@@ -158,5 +153,62 @@ function headerStyle() {
     }
   }
 }
-
+//Hide Loading Box (Preloader)
+function handlePreloader() {
+  if ($('.preloader').length) {
+    $('.preloader').delay(200).fadeOut(500)
+  }
+}
 headerStyle()
+
+$(document).ready(function () {
+  $('.owl-carousel').owlCarousel()
+
+  // Add scrollspy to <body>
+  $('body').scrollspy({ target: '#menu-header', offset: 50 })
+
+  // Add smooth scrolling on all links inside the navbar
+  $('#menu-header a').on('click', function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== '') {
+      // Prevent default anchor click behavior
+      event.preventDefault()
+
+      // Store hash
+      var hash = this.hash
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top - 90,
+        },
+        500,
+        function () {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          // window.location.hash = hash
+        }
+      )
+    } // End if
+  })
+})
+
+function sendMail() {
+  console.log('fsdfs')
+  Email.send({
+    Host: 'smtp.gmail.com',
+    Username: 'tathimyhanh03@gmail.com',
+    Password: '<email password>',
+    To: 'tahanh.aib@gmail.com',
+    From: 'tathimyhanh03@gmail.com',
+    Subject: 'Sending Email using javascript',
+    Body: 'Well that was easy!!',
+  }).then((message) => alert('mail sent successfully'))
+  console.log('adv')
+}
+$(window).on('scroll', function () {
+  headerStyle()
+})
+// $(window).on('load', function () {
+//   handlePreloader()
+// })

@@ -2,6 +2,7 @@
 @import url(font.css);
 @import url(header.css);
 @import url(footer.css);
+@import url(responsive.css);
 * {
   margin: 0px;
   padding: 0px;
@@ -9,6 +10,7 @@
   outline: none; }
 
 body {
+  position: relative;
   margin: 0;
   font-size: 15px !important;
   color: #777777 !important;
@@ -32,11 +34,9 @@ body {
     box-shadow: none; }
     body a:hover {
       text-decoration: none; }
-  body .row {
-    margin: 0; }
-  @media (min-width: 1200px) {
-    body .container {
-      max-width: 1200px; } }
+  body ul,
+  body li {
+    list-style: none; }
   body .elementor {
     width: 100%; }
     body .elementor .anim-icons-bg {
@@ -257,7 +257,7 @@ body {
           padding: 10px; }
   .theme-layout .work-section {
     position: relative;
-    padding-bottom: 110px; }
+    padding: 30px 0 100px; }
     .theme-layout .work-section .sec-title {
       margin-bottom: 60px;
       position: relative;
@@ -282,7 +282,8 @@ body {
       padding: 60px 40px 80px 50px;
       border-radius: 20px;
       box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
-      transition: all 500ms ease; }
+      transition: all 500ms ease;
+      margin: 0 0 50px; }
       .theme-layout .work-section .single-item .inner-box .pattern-bg {
         position: absolute;
         width: 250px;
@@ -290,7 +291,8 @@ body {
         top: 0px;
         right: 0px;
         background-repeat: no-repeat;
-        border-top-right-radius: 20px; }
+        border-top-right-radius: 20px;
+        background-image: url("../images/pattern.png"); }
       .theme-layout .work-section .single-item .inner-box h3 {
         position: relative;
         display: block;
@@ -308,9 +310,6 @@ body {
           height: 2px;
           left: 0px;
           bottom: 0px; }
-        .theme-layout .work-section .single-item .inner-box h3 a {
-          display: inline-block;
-          color: #222; }
       .theme-layout .work-section .single-item .inner-box .text {
         position: relative;
         font-size: 16px;
@@ -323,6 +322,8 @@ body {
         font-size: 70px;
         line-height: 70px;
         color: #0baabd; }
+        .theme-layout .work-section .single-item .inner-box .icon-box img {
+          width: 70px; }
       .theme-layout .work-section .single-item .inner-box .link-btn {
         position: absolute;
         left: 60px;
@@ -451,6 +452,8 @@ body {
           line-height: 70px;
           text-align: center;
           border-radius: 50%; }
+          .theme-layout .deal-section .inner-box .lower-content .single-item .icon-box img {
+            width: 30px; }
         .theme-layout .deal-section .inner-box .lower-content .single-item h3 {
           display: block;
           font-size: 22px;
@@ -476,10 +479,10 @@ body {
       .theme-layout .deal-section .two .inner-box {
         margin-bottom: 105px; }
   .theme-layout .deal-section-1 {
-    background-image: url("https://old4.commonsupport.com/appway/wp-content/uploads/2020/07/pattern-23.png");
+    background-image: url("../images/pattern-23.png");
     background-position: center right; }
   .theme-layout .deal-section-2 {
-    background-image: url("https://old4.commonsupport.com/appway/wp-content/uploads/2020/03/pattern-24.png");
+    background-image: url("../images/pattern-23.png");
     background-position: center left;
     padding: 130px 0px 0px 0px; }
     .theme-layout .deal-section-2 .one .inner-box .content-box {
@@ -612,7 +615,7 @@ body {
     padding: 110px 0px 140px 0px;
     width: 100%; }
     .theme-layout .counter .bg-layer {
-      background-image: url("http://old4.commonsupport.com/appway/wp-content/uploads/2020/03/map-shap-5.png");
+      background-image: url("../images/map.png");
       position: absolute;
       width: 100%;
       height: 100%;
@@ -683,15 +686,13 @@ body {
     .theme-layout .counter .counter-inner-box {
       position: relative;
       display: inline-block;
-      width: 240px;
-      height: 240px;
       background: #fff;
       border-radius: 50%;
       text-align: center;
       padding: 60px 30px;
       box-shadow: 15px 20px 30px 0px rgba(0, 0, 0, 0.1); }
       .theme-layout .counter .counter-inner-box .layer-bg {
-        background-image: url("http://old3.commonsupport.com/appway/wp-content/uploads/2020/03/pattern-25.png");
+        background-image: url("../images/pattern1.png");
         position: absolute;
         width: 100%;
         height: 100%;
@@ -731,8 +732,6 @@ body {
         position: absolute;
         content: '';
         background: #fff;
-        width: 270px;
-        height: 270px;
         left: 0px;
         top: -5px;
         border-radius: 50%;
@@ -749,7 +748,7 @@ body {
     padding: 110px 0px 100px 0px;
     width: 100%; }
     .theme-layout .testimonial .image-layer {
-      background-image: url("http://old4.commonsupport.com/appway/wp-content/uploads/2020/03/testimonial-bg-5.png");
+      background-image: url("../images/bg_testimonial.png");
       position: absolute;
       left: 0px;
       top: 0px;
@@ -969,7 +968,9 @@ body {
       height: 528px;
       left: 0px;
       bottom: -15px;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-image: url("../images/vactor1.png");
+      visibility: visible; }
     .theme-layout .check-website .vactor-bg .vactor-bg-2 {
       position: absolute;
       width: 783px;
@@ -977,7 +978,9 @@ body {
       right: 0px;
       bottom: 0px;
       z-index: -1;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-image: url("../images/vactor2.png");
+      visibility: visible; }
     .theme-layout .check-website .anim-icons {
       position: absolute;
       left: 0;
@@ -1018,12 +1021,15 @@ body {
       text-align: center; }
       .theme-layout .check-website .inner-container .sec-title {
         position: relative;
-        display: block; }
+        display: block;
+        margin-bottom: 86px; }
         .theme-layout .check-website .inner-container .sec-title h2 {
           color: #fff;
-          margin-bottom: 68px;
+          margin-bottom: 50px;
           font-size: 36px;
           line-height: 48px; }
+        .theme-layout .check-website .inner-container .sec-title p {
+          color: #fff; }
       .theme-layout .check-website .inner-container .subscribe-form .form-group {
         position: relative;
         margin-bottom: 42px; }
@@ -1032,7 +1038,8 @@ body {
           font-family: 'Ubuntu', sans-serif;
           font-weight: 400;
           font-size: 15px;
-          overflow: visible; }
+          overflow: visible;
+          margin: 0 0 20px; }
         .theme-layout .check-website .inner-container .subscribe-form .form-group input[type='text'] {
           position: relative;
           width: 100%;
@@ -1045,9 +1052,6 @@ body {
           border: 3px solid #fff;
           transition: all 500ms ease; }
         .theme-layout .check-website .inner-container .subscribe-form .form-group button {
-          position: absolute;
-          top: 0px;
-          right: 0px;
           background: #4527a4;
           font-size: 18px;
           font-weight: 500;
@@ -1061,7 +1065,8 @@ body {
           transition: all 500ms ease;
           display: inline-block;
           overflow: hidden;
-          z-index: 1; }
+          z-index: 1;
+          border: 1px solid #fff; }
           .theme-layout .check-website .inner-container .subscribe-form .form-group button:before {
             position: absolute;
             content: '';
@@ -1078,6 +1083,10 @@ body {
             -webkit-transform: scale(0.2, 1);
             transform: scale(0.2, 1);
             z-index: -1; }
+          .theme-layout .check-website .inner-container .subscribe-form .form-group button:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #4527a4; }
       .theme-layout .check-website .inner-container .text {
         position: relative;
         font-size: 16px;
@@ -1113,7 +1122,8 @@ body {
       right: 0px;
       background-size: cover;
       background-position: top center;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-image: url("../images/bg_estimate.png"); }
     .theme-layout .free-estimate .inner-box .text h2 {
       position: relative;
       font-size: 36px;
