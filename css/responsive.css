@@ -375,16 +375,18 @@
   .main-footer .footer-top .contact-widget .list li:first-child {
     margin-bottom: 0px; } }
 @media (max-width: 499px) {
-  .banner .content-box h1 {
-    font-size: 36px !important;
-    line-height: 45px !important; }
-  .banner .content-box .btn-box a {
-    margin: 0px !important; }
-  .banner .content-box .btn-box .btn-one {
-    width: 202px !important;
-    margin: 0px 0px 15px 0px !important; }
-  .banner .content-box .text {
-    padding: 0px !important; }
+  .banner .content-box {
+    max-width: 95% !important; }
+    .banner .content-box h1 {
+      font-size: 36px !important;
+      line-height: 45px !important; }
+    .banner .content-box .btn-box a {
+      margin: 0px !important; }
+    .banner .content-box .btn-box .btn-one {
+      width: 202px !important;
+      margin: 0px 0px 15px 0px !important; }
+    .banner .content-box .text {
+      padding: 0px !important; }
 
   .sec-title h2 {
     font-size: 30px !important;

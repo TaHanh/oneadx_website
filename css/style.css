@@ -171,8 +171,7 @@ body {
       top: 200px; }
     .theme-layout .banner .content-box {
       position: relative;
-      max-width: 730px;
-      width: 100%;
+      max-width: 75%;
       margin: 0 auto;
       text-align: center;
       padding-bottom: 38px; }
@@ -392,7 +391,6 @@ body {
   .theme-layout .deal-section {
     background-repeat: no-repeat;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    margin-top: -50px;
     margin-bottom: 0px;
     padding: 130px 0px 0px 0px;
     position: relative;
@@ -429,7 +427,7 @@ body {
         display: block; }
         .theme-layout .deal-section .inner-box .sec-title h2 {
           line-height: 60px;
-          margin-bottom: 71px;
+          margin-bottom: 50px;
           font-size: 36px; }
         .theme-layout .deal-section .inner-box .sec-title p {
           position: relative;
@@ -439,17 +437,15 @@ body {
           color: #777;
           margin: 0px; }
       .theme-layout .deal-section .inner-box .lower-content .single-item {
-        position: relative;
-        padding: 0px 0px 0px 100px;
-        margin-bottom: 41px; }
+        position: relative; }
         .theme-layout .deal-section .inner-box .lower-content .single-item .icon-box {
           position: absolute;
           left: 0px;
           top: 5px;
-          font-size: 35px;
-          width: 70px;
-          height: 70px;
-          line-height: 70px;
+          font-size: 25px;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
           text-align: center;
           border-radius: 50%; }
           .theme-layout .deal-section .inner-box .lower-content .single-item .icon-box img {
@@ -481,13 +477,25 @@ body {
   .theme-layout .deal-section-1 {
     background-image: url("../images/pattern-23.png");
     background-position: center right; }
+    .theme-layout .deal-section-1 .lower-content .single-item {
+      margin-bottom: 40px;
+      padding: 0px 0px 0px 100px; }
   .theme-layout .deal-section-2 {
     background-image: url("../images/pattern-23.png");
     background-position: center left;
     padding: 130px 0px 0px 0px; }
     .theme-layout .deal-section-2 .one .inner-box .content-box {
       position: relative;
-      margin-top: 52px; }
+      margin-top: 32px; }
+    .theme-layout .deal-section-2 .lower-content .single-item {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      padding: 0px 0px 0px 60px; }
+      .theme-layout .deal-section-2 .lower-content .single-item .icon {
+        color: green;
+        font-size: 30px;
+        margin: 0 30px 0 0; }
   .theme-layout .case-studies {
     position: relative;
     padding: 110px 0px 130px 0px;
@@ -642,34 +650,11 @@ body {
       display: block; }
       .theme-layout .counter .counter-title h2 {
         margin-bottom: 60px;
-        position: relative;
-        display: block;
         font-size: 36px;
-        line-height: 48px;
-        color: #222222;
-        font-weight: 500;
-        padding-bottom: 31px; }
+        line-height: 48px; }
         .theme-layout .counter .counter-title h2:before, .theme-layout .counter .counter-title h2:after {
           left: 50%;
           transform: translateX(-50%); }
-        .theme-layout .counter .counter-title h2:before {
-          position: absolute;
-          content: '';
-          width: 130px;
-          height: 2px;
-          bottom: 0px;
-          background: linear-gradient(90deg, #00deff 0%, #7141b1 0%, #00deff 100%); }
-        .theme-layout .counter .counter-title h2:after {
-          position: absolute;
-          content: '';
-          width: 45px;
-          height: 4px;
-          bottom: 0px;
-          transition: all 500ms ease;
-          -webkit-mask-image: linear-gradient(-75deg, rgba(244, 55, 55, 0.6) 50%, #f43737 50%, black 70%);
-          -webkit-mask-size: 200%;
-          animation: shine 2s infinite;
-          background: linear-gradient(90deg, #ff7200 0%, #7141b1 0%, #00deff 100%); }
       .theme-layout .counter .counter-title p {
         text-align: center;
         display: block;
@@ -685,12 +670,15 @@ body {
       color: #3c00ff; }
     .theme-layout .counter .counter-inner-box {
       position: relative;
-      display: inline-block;
       background: #fff;
       border-radius: 50%;
       text-align: center;
-      padding: 60px 30px;
-      box-shadow: 15px 20px 30px 0px rgba(0, 0, 0, 0.1); }
+      padding: 35px 20px;
+      box-shadow: 15px 20px 30px 0px rgba(0, 0, 0, 0.1);
+      margin: 30px auto !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
       .theme-layout .counter .counter-inner-box .layer-bg {
         background-image: url("../images/pattern1.png");
         position: absolute;
@@ -705,7 +693,7 @@ body {
       .theme-layout .counter .counter-inner-box .count-outer span {
         position: relative;
         display: block;
-        font-size: 60px;
+        font-size: 35px;
         font-weight: 700;
         line-height: 70px;
         color: #4527a4;
@@ -1083,10 +1071,6 @@ body {
             -webkit-transform: scale(0.2, 1);
             transform: scale(0.2, 1);
             z-index: -1; }
-          .theme-layout .check-website .inner-container .subscribe-form .form-group button:hover {
-            background: #fff;
-            border-color: #fff;
-            color: #4527a4; }
       .theme-layout .check-website .inner-container .text {
         position: relative;
         font-size: 16px;
@@ -1099,16 +1083,46 @@ body {
     padding: 120px 0px 115px 0px;
     position: relative;
     text-align: center; }
-    .theme-layout .clients .image-box img {
+    .theme-layout .clients .clients-title {
+      position: relative;
+      display: block; }
+      .theme-layout .clients .clients-title h2 {
+        margin-bottom: 60px;
+        font-size: 36px;
+        line-height: 48px; }
+        .theme-layout .clients .clients-title h2:before, .theme-layout .clients .clients-title h2:after {
+          left: 50%;
+          transform: translateX(-50%); }
+    .theme-layout .clients .clients-carousel {
+      margin: 80px 0; }
+      .theme-layout .clients .clients-carousel .image-box img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease; }
+      .theme-layout .clients .clients-carousel .owl-prev,
+      .theme-layout .clients .clients-carousel .owl-next {
+        position: absolute;
+        top: 35%;
+        width: 30px;
+        height: 30px;
+        margin: 0; }
+      .theme-layout .clients .clients-carousel .owl-prev {
+        left: -30px; }
+      .theme-layout .clients .clients-carousel .owl-next {
+        right: -30px; }
+    .theme-layout .clients p.txt {
+      text-align: center;
       display: block;
-      max-width: 100%;
-      width: auto;
-      margin: 0 auto;
-      -webkit-transition: all 300ms ease;
-      -moz-transition: all 300ms ease;
-      -ms-transition: all 300ms ease;
-      -o-transition: all 300ms ease;
-      transition: all 300ms ease; }
+      font-size: 16px;
+      line-height: 30px;
+      color: #777;
+      margin: 0px; }
   .theme-layout .free-estimate {
     position: relative;
     padding: 170px 0px 25px 0px;
@@ -1172,5 +1186,34 @@ body {
             opacity: 1;
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1); }
+
+.services .free-esti {
+  position: relative;
+  padding: 100px 0px 200px;
+  width: 100%; }
+  .services .free-esti .image-layer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    background-size: auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-image: url("../images/testimonial-bg.png"); }
+  .services .free-esti .txt {
+    color: #fff;
+    text-align: center; }
+.services .deal-section .single-item-check {
+  display: flex;
+  align-items: center;
+  padding: 0; }
+  .services .deal-section .single-item-check .icon {
+    color: green;
+    font-size: 30px;
+    margin: 0 30px 0 0; }
+.services .deal-section .single-item {
+  padding: 0 0 0 60px !important; }
 
 /*# sourceMappingURL=style.css.map */

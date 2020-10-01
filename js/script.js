@@ -59,7 +59,7 @@ if ($('.clients-carousel').length) {
   $('.clients-carousel').owlCarousel({
     loop: true,
     margin: 30,
-    nav: false,
+    nav: true,
     dots: false,
     smartSpeed: 3000,
     autoplay: true,
@@ -181,7 +181,7 @@ $(document).ready(function () {
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate(
         {
-          scrollTop: $(hash).offset().top - 90,
+          scrollTop: $(hash).offset().top - 60,
         },
         500,
         function () {
