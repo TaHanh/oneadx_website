@@ -1030,7 +1030,7 @@ body {
           margin: 0 0 20px; }
         .theme-layout .check-website .inner-container .subscribe-form .form-group input[type='text'] {
           position: relative;
-          width: 100%;
+          width: 70%;
           height: 70px;
           background: #fff;
           border-radius: 40px;
@@ -1040,6 +1040,8 @@ body {
           border: 3px solid #fff;
           transition: all 500ms ease; }
         .theme-layout .check-website .inner-container .subscribe-form .form-group button {
+          display: block;
+          margin: auto;
           background: #4527a4;
           font-size: 18px;
           font-weight: 500;
@@ -1051,7 +1053,6 @@ body {
           height: 70px;
           cursor: pointer;
           transition: all 500ms ease;
-          display: inline-block;
           overflow: hidden;
           z-index: 1;
           border: 1px solid #fff; }
