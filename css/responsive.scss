@@ -262,7 +262,7 @@
       }
     }
   }
-  .check-website {
+  .check-website, .contact-service {
     &:before {
       display: none;
     }
@@ -653,9 +653,6 @@
     }
   }
 
-  .owl-dots {
-    display: none !important;
-  }
 
   .elementor {
     .elementor-widget {

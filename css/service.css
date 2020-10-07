@@ -13,7 +13,7 @@ body {
   position: relative;
   margin: 0;
   font-size: 15px !important;
-  color: #777777 !important;
+  color: #656565 !important;
   line-height: 30px !important;
   font-family: 'Ubuntu', sans-serif !important;
   -webkit-font-smoothing: antialiased; }
@@ -37,6 +37,10 @@ body {
   body ul,
   body li {
     list-style: none; }
+  body button {
+    outline: none; }
+    body button:focus {
+      outline: none; }
   body .elementor {
     width: 100%; }
     body .elementor .anim-icons-bg {
@@ -86,6 +90,28 @@ body {
         -o-animation-duration: 30s;
         -o-animation-iteration-count: infinite;
         -o-animation-timing-function: linear; }
+      body .elementor .anim-icons-bg .icon-1 {
+        left: 100px;
+        top: 370px;
+        -webkit-animation: zoom-fade 2s infinite linear;
+        animation: zoom-fade 2s infinite linear; }
+      body .elementor .anim-icons-bg .icon-2 {
+        left: 100px;
+        top: 50%; }
+      body .elementor .anim-icons-bg .icon-3 {
+        left: 100px;
+        bottom: 0px; }
+      body .elementor .anim-icons-bg .icon-4 {
+        right: 100px;
+        bottom: 0px;
+        -webkit-animation: zoom-fade 2s infinite linear;
+        animation: zoom-fade 2s infinite linear; }
+      body .elementor .anim-icons-bg .icon-5 {
+        right: 100px;
+        top: 50%; }
+      body .elementor .anim-icons-bg .icon-6 {
+        right: 240px;
+        top: 200px; }
     body .elementor .title {
       position: relative;
       display: block;
@@ -103,7 +129,7 @@ body {
       body .elementor .title:after {
         position: absolute;
         content: '';
-        background: #777777;
+        background: #656565;
         width: 45px;
         height: 4px;
         bottom: 0px;
@@ -149,28 +175,6 @@ body {
     position: relative;
     padding: 195px 0px 110px 0px;
     width: 100%; }
-    .services .banner-service .anim-icons-bg .icon-1 {
-      left: 100px;
-      top: 370px;
-      -webkit-animation: zoom-fade 2s infinite linear;
-      animation: zoom-fade 2s infinite linear; }
-    .services .banner-service .anim-icons-bg .icon-2 {
-      left: 100px;
-      top: 50%; }
-    .services .banner-service .anim-icons-bg .icon-3 {
-      left: 100px;
-      bottom: 0px; }
-    .services .banner-service .anim-icons-bg .icon-4 {
-      right: 100px;
-      bottom: 0px;
-      -webkit-animation: zoom-fade 2s infinite linear;
-      animation: zoom-fade 2s infinite linear; }
-    .services .banner-service .anim-icons-bg .icon-5 {
-      right: 100px;
-      top: 50%; }
-    .services .banner-service .anim-icons-bg .icon-6 {
-      right: 240px;
-      top: 200px; }
     .services .banner-service .content-box {
       position: relative;
       max-width: 75%;
@@ -196,7 +200,7 @@ body {
         line-height: 36px;
         margin-bottom: 47px;
         padding: 0px 40px;
-        color: #777777; }
+        color: #656565; }
       .services .banner-service .content-box .btn-box .btn-one {
         position: relative;
         display: inline-block;
@@ -262,6 +266,8 @@ body {
           border-radius: 50%;
           text-align: center;
           padding: 10px; }
+    .services .banner-service .txt {
+      line-height: 32px; }
   .services .work-section-service {
     position: relative;
     padding: 30px 0 100px; }
@@ -337,7 +343,6 @@ body {
         text-align: right; } }
   .services .deal-section-service {
     background-repeat: no-repeat;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-bottom: 0px;
     padding: 130px 0px 0px 0px;
     position: relative;
@@ -412,7 +417,7 @@ body {
             color: #222; }
         .services .deal-section-service .inner-box .lower-content .single-item .text {
           font-size: 16px;
-          color: #777777; }
+          color: #656565; }
         .services .deal-section-service .inner-box .lower-content .single-item .text.color-white {
           opacity: 0.8; }
         .services .deal-section-service .inner-box .lower-content .single-item:last-child .icon-box {
@@ -427,22 +432,26 @@ body {
       .services .deal-section-service .inner-box .lower-content .single-item-check {
         display: flex;
         align-items: center;
-        padding: 0; }
+        padding: 0;
+        margin: 0 0 20px; }
         .services .deal-section-service .inner-box .lower-content .single-item-check .icon {
           color: green;
           font-size: 30px;
           margin: 0 30px 0 0; }
     .services .deal-section-service .two {
-      position: relative;
-      top: -50px; }
+      position: relative; }
       .services .deal-section-service .two .inner-box {
-        margin-bottom: 105px; }
+        margin-bottom: 80px; }
   .services .deal-section-1 {
-    background-image: url("../images/pattern-23.png");
-    background-position: center right; }
+    background-image: url("../images/pattern-24.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain; }
   .services .deal-section-2 {
     background-image: url("../images/pattern-23.png");
-    background-position: center left;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
     padding: 130px 0px 0px 0px; }
     .services .deal-section-2 .one .inner-box .content-box {
       position: relative;
@@ -548,6 +557,7 @@ body {
               padding: 15px 20px;
               width: 100%; } }
         .services .contact-service .inner-container .subscribe-form .form-group button {
+          margin: 15px 0 0;
           background: #4527a4;
           font-size: 18px;
           font-weight: 500;

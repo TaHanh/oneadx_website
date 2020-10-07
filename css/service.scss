@@ -15,7 +15,7 @@ body {
   position: relative;
   margin: 0;
   font-size: 15px !important;
-  color: #777777 !important;
+  color: #656565 !important;
   line-height: 30px !important;
   font-family: 'Ubuntu', sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +44,12 @@ body {
   li {
     list-style: none;
   }
-
+  button {
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
   .elementor {
     width: 100%;
 
@@ -99,6 +104,35 @@ body {
         -o-animation-iteration-count: infinite;
         -o-animation-timing-function: linear;
       }
+      .icon-1 {
+        left: 100px;
+        top: 370px;
+        -webkit-animation: zoom-fade 2s infinite linear;
+        animation: zoom-fade 2s infinite linear;
+      }
+      .icon-2 {
+        left: 100px;
+        top: 50%;
+      }
+      .icon-3 {
+        left: 100px;
+        bottom: 0px;
+      }
+      .icon-4 {
+        right: 100px;
+        bottom: 0px;
+        -webkit-animation: zoom-fade 2s infinite linear;
+        animation: zoom-fade 2s infinite linear;
+      }
+      .icon-5 {
+        right: 100px;
+        top: 50%;
+      }
+
+      .icon-6 {
+        right: 240px;
+        top: 200px;
+      }
     }
     .title {
       position: relative;
@@ -123,7 +157,7 @@ body {
       &:after {
         position: absolute;
         content: '';
-        background: #777777;
+        background: #656565;
         width: 45px;
         height: 4px;
         bottom: 0px;
@@ -185,37 +219,7 @@ body {
     position: relative;
     padding: 195px 0px 110px 0px;
     width: 100%;
-    .anim-icons-bg {
-      .icon-1 {
-        left: 100px;
-        top: 370px;
-        -webkit-animation: zoom-fade 2s infinite linear;
-        animation: zoom-fade 2s infinite linear;
-      }
-      .icon-2 {
-        left: 100px;
-        top: 50%;
-      }
-      .icon-3 {
-        left: 100px;
-        bottom: 0px;
-      }
-      .icon-4 {
-        right: 100px;
-        bottom: 0px;
-        -webkit-animation: zoom-fade 2s infinite linear;
-        animation: zoom-fade 2s infinite linear;
-      }
-      .icon-5 {
-        right: 100px;
-        top: 50%;
-      }
 
-      .icon-6 {
-        right: 240px;
-        top: 200px;
-      }
-    }
     .content-box {
       position: relative;
       max-width: 75%;
@@ -246,8 +250,9 @@ body {
         line-height: 36px;
         margin-bottom: 47px;
         padding: 0px 40px;
-        color: #777777;
+        color: #656565;
       }
+
       .btn-box {
         .btn-one {
           position: relative;
@@ -324,7 +329,8 @@ body {
         }
       }
     }
-    .image-box {
+    .txt {
+      line-height: 32px;
     }
   }
   .work-section-service {
@@ -417,8 +423,6 @@ body {
   }
   .deal-section-service {
     background-repeat: no-repeat;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    // margin-top: -50px;
     margin-bottom: 0px;
     padding: 130px 0px 0px 0px;
     position: relative;
@@ -507,7 +511,7 @@ body {
           }
           .text {
             font-size: 16px;
-            color: #777777;
+            color: #656565;
           }
           .text.color-white {
             opacity: 0.8;
@@ -528,6 +532,7 @@ body {
           display: flex;
           align-items: center;
           padding: 0;
+          margin: 0 0 20px;
           .icon {
             color: green;
             font-size: 30px;
@@ -540,19 +545,22 @@ body {
     }
     .two {
       position: relative;
-      top: -50px;
       .inner-box {
-        margin-bottom: 105px;
+        margin-bottom: 80px;
       }
     }
   }
   .deal-section-1 {
-    background-image: url('../images/pattern-23.png');
-    background-position: center right;
+    background-image: url('../images/pattern-24.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .deal-section-2 {
     background-image: url('../images/pattern-23.png');
-    background-position: center left;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
     padding: 130px 0px 0px 0px;
     .one {
       .inner-box {
@@ -561,8 +569,6 @@ body {
           margin-top: 32px;
         }
       }
-    }
-    .lower-content {
     }
   }
 
@@ -683,9 +689,7 @@ body {
             }
           }
           button {
-            // position: absolute;
-            // top: 0px;
-            // right: 0px;
+            margin: 15px 0 0;
             background: #4527a4;
             font-size: 18px;
             font-weight: 500;

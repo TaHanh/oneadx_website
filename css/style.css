@@ -13,7 +13,7 @@ body {
   position: relative;
   margin: 0;
   font-size: 15px !important;
-  color: #777777 !important;
+  color: #656565 !important;
   line-height: 30px !important;
   font-family: 'Ubuntu', sans-serif !important;
   -webkit-font-smoothing: antialiased; }
@@ -37,6 +37,10 @@ body {
   body ul,
   body li {
     list-style: none; }
+  body button {
+    outline: none; }
+    body button:focus {
+      outline: none; }
   body .elementor {
     width: 100%; }
     body .elementor .anim-icons-bg {
@@ -103,7 +107,7 @@ body {
       body .elementor .title:after {
         position: absolute;
         content: '';
-        background: #777777;
+        background: #525252;
         width: 45px;
         height: 4px;
         bottom: 0px;
@@ -188,7 +192,7 @@ body {
         line-height: 36px;
         margin-bottom: 47px;
         padding: 0px 40px;
-        color: #777777; }
+        color: #525252; }
       .theme-layout .banner .content-box .btn-box .btn-one {
         position: relative;
         display: inline-block;
@@ -227,42 +231,21 @@ body {
           opacity: 1;
           -webkit-transform: scale(1, 1);
           transform: scale(1, 1); }
-      .theme-layout .banner .content-box .btn-box .video-btn {
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-        font-size: 16px;
-        line-height: 30px;
-        color: #222;
-        background: #e3f1f9;
-        padding: 15px 80px 15px 45px;
-        border-radius: 30px;
-        margin: 0px 15px; }
-        .theme-layout .banner .content-box .btn-box .video-btn:hover {
-          background: #4527a4;
-          color: #fff; }
-        .theme-layout .banner .content-box .btn-box .video-btn img {
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          width: 60px;
-          height: 60px;
-          line-height: 60px;
-          background: #4527a4;
-          color: #fff;
-          font-size: 18px;
-          border-radius: 50%;
-          text-align: center;
-          padding: 10px; }
+    .theme-layout .banner .image-box {
+      width: 100%; }
+      @media (min-width: 922px) {
+        .theme-layout .banner .image-box {
+          width: 80%;
+          margin: auto; } }
   .theme-layout .work-section {
     position: relative;
     padding: 30px 0 100px; }
     .theme-layout .work-section .sec-title {
-      margin-bottom: 60px;
+      margin-bottom: 80px;
       position: relative;
       display: block; }
       .theme-layout .work-section .sec-title h2 {
-        margin-bottom: 60px;
+        margin-bottom: 35px;
         font-size: 36px;
         line-height: 48px;
         color: #222222; }
@@ -273,12 +256,15 @@ body {
         line-height: 30px;
         color: #777;
         margin: 0px;
-        font-style: normal;
-        transition: all 500ms ease; }
+        font-style: normal; }
+        @media (min-width: 992px) {
+          .theme-layout .work-section .sec-title p {
+            max-width: 80%;
+            margin: auto; } }
     .theme-layout .work-section .single-item .inner-box {
       position: relative;
       background: #fff;
-      padding: 60px 40px 80px 50px;
+      padding: 35px 30px 80px 30px;
       border-radius: 20px;
       box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
       transition: all 500ms ease;
@@ -295,25 +281,28 @@ body {
       .theme-layout .work-section .single-item .inner-box h3 {
         position: relative;
         display: block;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 32px;
         font-weight: 500;
         color: #222;
-        margin-bottom: 29px;
-        padding-bottom: 40px; }
-        .theme-layout .work-section .single-item .inner-box h3:before {
-          position: absolute;
-          content: '';
-          background: #4527a4;
-          width: 40px;
-          height: 2px;
-          left: 0px;
-          bottom: 0px; }
+        margin-bottom: 15px;
+        height: 64px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .theme-layout .work-section .single-item .inner-box hr {
+        background: #4527a4;
+        width: 40px;
+        height: 2px;
+        margin-bottom: 30px; }
       .theme-layout .work-section .single-item .inner-box .text {
         position: relative;
         font-size: 16px;
         line-height: 36px;
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        min-height: 150px; }
       .theme-layout .work-section .single-item .inner-box .icon-box {
         position: absolute;
         right: 40px;
@@ -322,7 +311,7 @@ body {
         line-height: 70px;
         color: #0baabd; }
         .theme-layout .work-section .single-item .inner-box .icon-box img {
-          width: 70px; }
+          width: 100px; }
       .theme-layout .work-section .single-item .inner-box .link-btn {
         position: absolute;
         left: 60px;
@@ -389,10 +378,8 @@ body {
           background: #fff;
           box-shadow: 0 0 15px rgba(69, 39, 164, 0.5); }
   .theme-layout .deal-section {
-    background-repeat: no-repeat;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-bottom: 0px;
-    padding: 130px 0px 0px 0px;
+    padding: 80px 0px 30px 0px;
     position: relative;
     display: block;
     width: 100%; }
@@ -462,27 +449,28 @@ body {
             color: #222; }
         .theme-layout .deal-section .inner-box .lower-content .single-item .text {
           font-size: 16px;
-          color: #777777; }
+          color: #525252; }
         .theme-layout .deal-section .inner-box .lower-content .single-item:last-child .icon-box {
           background: #fff1e1;
           color: #bd6e16; }
         .theme-layout .deal-section .inner-box .lower-content .single-item:first-child .icon-box {
           background: #edfffa !important;
           color: #4527a4 !important; }
-    .theme-layout .deal-section .two {
-      position: relative;
-      top: -50px; }
-      .theme-layout .deal-section .two .inner-box {
-        margin-bottom: 105px; }
+    .theme-layout .deal-section .two .inner-box {
+      margin-bottom: 50px; }
   .theme-layout .deal-section-1 {
-    background-image: url("../images/pattern-23.png");
-    background-position: center right; }
+    background-image: url("../images/shap.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain; }
     .theme-layout .deal-section-1 .lower-content .single-item {
       margin-bottom: 40px;
       padding: 0px 0px 0px 100px; }
   .theme-layout .deal-section-2 {
     background-image: url("../images/pattern-23.png");
-    background-position: center left;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
     padding: 130px 0px 0px 0px; }
     .theme-layout .deal-section-2 .one .inner-box .content-box {
       position: relative;
@@ -498,7 +486,7 @@ body {
         margin: 0 30px 0 0; }
   .theme-layout .case-studies {
     position: relative;
-    padding: 110px 0px 130px 0px;
+    padding: 100px 0px;
     background-image: -webkit-linear-gradient(-90deg, #3d00ff 0%, #4527a4 100%);
     width: 100%; }
     .theme-layout .case-studies .outer-container {
@@ -510,10 +498,9 @@ body {
       .theme-layout .case-studies .outer-container .sec-title {
         margin-bottom: 74px; }
         .theme-layout .case-studies .outer-container .sec-title h2 {
-          margin-bottom: 60px;
+          margin-bottom: 35px;
           color: #fff;
-          font-size: 36px;
-          line-height: 48px; }
+          font-size: 36px; }
         .theme-layout .case-studies .outer-container .sec-title p {
           color: #fff;
           display: block;
@@ -572,7 +559,7 @@ body {
           border-color: #fff; }
           .theme-layout .case-studies .outer-container .case-block-one .inner-box .lower-content h2 {
             position: relative;
-            font-size: 30px;
+            font-size: 25px;
             line-height: 40px;
             font-weight: 500;
             color: #fff;
@@ -800,7 +787,8 @@ body {
       .theme-layout .testimonial .testimonial-carousel .testimonial-content .text {
         position: relative;
         font-size: 16px;
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        min-height: 200px; }
       .theme-layout .testimonial .testimonial-carousel .testimonial-content .icon-box {
         position: absolute;
         left: 50%;
@@ -958,7 +946,7 @@ body {
     position: relative;
     background: #4527a4;
     overflow: hidden;
-    padding: 115px 0px;
+    padding: 100px 0px;
     z-index: 1;
     width: 100%; }
     .theme-layout .check-website .vactor-bg .vactor-bg-1 {

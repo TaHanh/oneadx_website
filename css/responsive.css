@@ -126,11 +126,11 @@
       width: 220px;
       height: 220px; }
 
-  .check-website:before {
+  .check-website:before, .contact-service:before {
     display: none; }
-  .check-website:after {
+  .check-website:after, .contact-service:after {
     display: none; }
-  .check-website .vactor-bg {
+  .check-website .vactor-bg, .contact-service .vactor-bg {
     display: none; }
 
   .menu-area .mobile-nav-toggler {
@@ -343,9 +343,6 @@
 
   .main-header .menu-area .btn-box {
     display: none; }
-
-  .owl-dots {
-    display: none !important; }
 
   .elementor .elementor-widget:not(.elementor-widget-text-editor) figure {
     margin-bottom: 30px !important; } }

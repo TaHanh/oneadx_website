@@ -181,7 +181,7 @@ $(document).ready(function () {
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate(
         {
-          scrollTop: $(hash).offset().top - 60,
+          scrollTop: $(hash).offset().top - 50,
         },
         500,
         function () {
@@ -194,17 +194,7 @@ $(document).ready(function () {
 })
 
 function sendMail() {
-  console.log('fsdfs')
-  Email.send({
-    Host: 'smtp.gmail.com',
-    Username: 'tathimyhanh03@gmail.com',
-    Password: '<email password>',
-    To: 'tahanh.aib@gmail.com',
-    From: 'tathimyhanh03@gmail.com',
-    Subject: 'Sending Email using javascript',
-    Body: 'Well that was easy!!',
-  }).then((message) => alert('mail sent successfully'))
-  console.log('adv')
+ 
 }
 $(window).on('scroll', function () {
   headerStyle()
